@@ -1,0 +1,873 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0;padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    scroll-behavior: smooth;
+}
+ html
+ {
+
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x:hidden;
+
+    &::-webkit-scrollbar{
+        width:1rem ;
+    }
+    &::-webkit-scrollbar-track{
+        background: black;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: rgb(202, 47, 47)02, 47, 47;
+    }
+}
+ body{
+    background: black
+ }
+ .header{
+
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    background: rgb(15, 15, 15);
+
+    .logo{
+        font-weight: bolder;
+        color: white;
+        font-size: 3rem;
+
+        span{
+            color: red;
+        }
+
+    }
+
+    .navbar a{
+        display: inline-block;
+        padding: 3rem 2rem;
+        font-size: 1.7rem;
+        color: white;
+        margin-top: 10px;
+        z-index: 10;
+       
+        &:hover{
+            background: red;
+        }
+    }
+
+ }
+ 
+  /* media queries */
+
+  @media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 0 2rem;
+    }
+ }
+
+ @media (max-width:768px){
+
+    div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    display: inline-block;
+  }
+    .header{
+        padding: 2rem;
+
+        .navbar{
+            position: relative;
+            top: 99%; left: 0; right: 0;background: rgb(175, 163, 163);
+            /* clip-path: polygon(0 0, 100% 0 ,100% 0, 0 0); */
+
+            a{
+                display: block;
+                font-size: 2rem;
+            }
+        }
+     }
+    }
+ @media (max-width:450px){
+    html{
+        font-size: 55%;
+    }
+ }
+ 
+ .home{
+
+  color: white;
+  z-index: -5;
+   
+ }
+ .navbar{
+    z-index: -4;
+ }
+
+ footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+ .view{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+ }
+ 
+ .home{
+    display: flex;
+    min-height: 120vh;
+    align-items: center;
+    justify-content: center;
+    z-index: -3;
+    position: relative;
+  
+ }
+ .banner{
+    height: 900px;
+    width: 100%;
+    background-size: cover;
+    background-position: center; 
+    filter: brightness(60%); 
+    position: absolute;
+    z-index: -10;
+    /* margin-top: 6%;  */ 
+ }
+ .highlight{
+    width: 70%;
+     position: relative; 
+     display: inline-block; 
+     z-index: 50;
+ }
+ .highlight h3{
+
+    display: inline;
+    font-size: 2vw;
+    padding: 5px 20px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-left: 6px solid ;
+
+ }
+ .highlight h1{
+
+    font-size: 9vw;
+    text-align: center;
+    font-weight: normal;
+ }
+ .highlight b{
+
+   color: red;
+   font-weight: 800;
+   font-family: sans-serif;
+ }
+ .highlight .tagline{
+
+color: #e7d1d1;
+font-size: 1.2vw;
+text-align: center;
+font-weight: normal;
+ }
+ 
+
+ .highlight .join{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    padding: 5px 20px;
+    font-size: 1.5vw;
+    margin-top: 1.2em;
+    color: red;
+    border: 2px solid rgb(136, 119, 119);
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: 1s;
+ }
+ .highlight .join:hover{
+
+    color: #d3cccc;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    background: green;
+ }
+ .main{
+    width: 100ch;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 3rem;
+    padding-left: 15%;
+ }
+ .main span{
+    color: red;
+ }
+ .about{
+    padding-top: -100%;
+    margin-top: -20%;
+    z-index: -10;
+ }
+ 
+ .main h3{
+    margin-top: 20%;
+    font-size: 13px;
+    color: white;
+    /* margin-left: -1160px; */
+    font-family: sans-serif;
+    font-weight: lighter;
+   
+   position: relative;
+    width: 100%;
+    color: white;
+    margin-left: -360px;
+    /* height: 100%; */
+    /* padding: 20px 70px; */
+ }
+ .content{
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 20 70px;
+    justify-content: center;
+    
+ }
+ .content .cols{
+    position: relative;
+    width: 100%;
+    color: white;
+    height: 100%;
+    padding: 20px 70px;
+    font-size: 1.2vw;
+    z-index: -3;
+    text-align: justify;
+    line-height: 40px;
+    text-indent: 100px;
+    /* word-spacing: px; */
+    letter-spacing: 1px;
+ }
+ .about .content .cols p b{
+    font-size: 20px;
+    margin-right: 2px;
+    color: white;
+ }
+  .content .cols a{
+    position: relative;
+    top: 20px;
+    color: #fff;
+    background: red;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize !important;
+ }
+
+  .content .cols a:hover{
+
+    color: black;
+    background: #fff;
+ }
+ .about .content .cols .box{
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+ }
+ .about .content .cols .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+    padding-top: 0px;
+    margin-top: -12%;
+    background-size: cover;
+    z-index: -7;
+    border-radius: 20%;
+
+ }
+ /* .about .content .cols .box img:hover{
+
+ } */
+ .navbar{
+    position: relative;
+ }
+
+ .head{
+    padding-top: 40px;
+ }
+ .Overview{
+    font-size: 15px;
+    font-family: sans-serif;
+    text-decoration: none;
+ }
+ .over{
+
+    margin-left: -730px !important;
+    position: relative;
+    font-size: 30px !important;
+    position: relative;
+    z-index: -3;
+    padding-left: 8%;
+    /* color: red !important; */
+ } 
+#text{
+    margin-left:-100px;
+}
+
+ .workout { 
+    position: relative; 
+    z-index: -1;
+}
+
+.workout .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.workout .content .frame {
+    width: 300px;
+    padding: 20px;
+    background: #222;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative; 
+    z-index: 1; 
+}
+.workout .content .frame .box {
+    height: 200px;
+    overflow: hidden;
+}
+.workout .content .frame .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 0.2s ease-in;
+}
+.kenburns-top-right {
+	-webkit-animation: kenburns-top-right 7s ease-out both;
+	        animation: kenburns-top-right 7s ease-out both;
+}
+.kenburns-top {
+	-webkit-animation: kenburns-top 5s ease-out infinite both;
+	        animation: kenburns-top 5s ease-out infinite both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-5-28 22:5:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-5-28 19:28:47
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation kenburns-top-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes kenburns-top-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 16%;
+              transform-origin: 84% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translate(20px, -15px);
+              transform: scale(1.25) translate(20px, -15px);
+      -webkit-transform-origin: right top;
+              transform-origin: right top;
+    }
+  }
+  @keyframes kenburns-top-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 16%;
+              transform-origin: 84% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translate(20px, -15px);
+              transform: scale(1.25) translate(20px, -15px);
+      -webkit-transform-origin: right top;
+              transform-origin: right top;
+    }
+  }
+  
+
+.workout .content .frame .box:hover img {
+    filter: brightness(100%);
+    transform: scale(1.08);
+}
+
+.workout .content .frame .title {
+    color: rgb(90, 175, 21);
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.workout .content .frame p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.workout .content .frame a {
+    color: red;
+    background: transparent;
+    padding: 5px 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+.workout .content .frame a:hover {
+    color: white;
+    background: red;
+}
+
+#form .container {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+    color: white;
+}
+
+#form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wform{
+    font-size: 20px;
+}
+
+#workoutForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#workoutForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#workoutForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    /* color: white; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+#workoutForm button:hover {
+    background-color: darkred;
+}
+
+#logMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* #form {
+    display: block; 
+    visibility: visible;
+} */
+
+
+/* diet style */
+
+.diet .content{
+
+    flex-direction: column;
+}
+.diet .content .row:nth-child(odd) .a{
+    order:2;
+
+}
+.diet .content .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+}
+.diet .content .row .cols {
+    position: relative;
+    width: 600px;
+    padding: 20px 50px;
+}
+.diet .content .row:nth-child(odd) .cols .heading{
+    color: #02a3ff;
+}
+
+.diet .content .row .cols .heading {
+    font-size: 2em;
+    color: #ff8502;
+    text-transform: capitalize;
+}
+.diet .content .row .cols .heading p{
+
+    font-size: 10px;
+}
+.diet .content .row .cols .boxes {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+#dp{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 130px;
+    color: white;
+    font-size: 17px;
+}
+
+#dp:hover{
+    background-color: red;
+}
+.diet .content .row .cols .boxes img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover ;
+    margin-left: -100px;
+   
+}
+.diet .content .row .cols .boxes img:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.diet{
+    padding-top:3%;
+    /* position: relative; */
+    z-index: -4;
+}
+.boxes:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+
+.progress1 {
+    /* background: rgb(30, 30, 30); */
+    padding: 5%;
+    /* margin-top: 176%; */
+    /* height: 400px; */
+    padding-left: 14%;
+    /* z-index: -4; */
+    /* padding-top: 90%; */
+}
+.m{
+    padding-left: 0%;
+    padding-right: 0.1% !important;
+    
+}
+.container{
+    border-radius: 4px;
+    color: black;
+}
+
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+input {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#workout-list, #diet-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#workout-list div, #diet-list div {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+
+.contact{
+    /* background: rgb(30, 30, 30); */
+    padding: 5%;
+    padding-left: 4%;
+    padding-top: 100%;
+    z-index: 10;
+    /* margin-top: 1px; */
+   /* padding-bottom: 1px; */
+   /* padding-top: -10px; */
+}
+.view1{
+    padding-top: 530px;
+}
+.pr{
+    padding-top: 3500px;
+}
+.progress .main h2, .contact .main h2 {
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.progress .main h2 span, .contact .main h2 span {
+    color: red;
+}
+.progress .main h6, .contact .main h6 {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+.contact .container {
+    background: rgb(20, 20, 20);
+    padding: 3%;
+    border-radius: 10px;
+    /* padding-bottom: 20px; */
+    
+}
+
+.contact .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 10px;
+}
+
+.contact .container form label {
+    font-size: 1.8rem;
+    color: white;
+}
+.main1{
+  background-color: #adb6bb; 
+}
+act .container form input,
+.contact .container form textarea,
+.contact .container form button {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact .container form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact .container form button {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+#contactMessage {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: red;
+}
+
+
+@media screen and  (max-width:900px){
+    .navbar{
+        padding: 0 60px;
+
+    }
+   .navbar ol{
+    display: none;
+   }
+   .navbar .toggle{
+    height: 25px;
+    width: 25px;
+    margin: auto 0;
+    cursor: pointer;
+    background: url(menubar.jpg);
+    background-size: cover;
+    background-position: center ;
+    filter: invert(1);
+    background-repeat: no-repeat;
+
+   }
+
+}
+
+/* last */
+
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    
+  
+   
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* .progress {
+    height: 100%;
+    width: 0;
+    background: #4caf50;
+    transition: width 0.3s;
+} */
+
+.form-step {
+    display: none;
+}
+
+.form-step-active {
+    display: block;
+}
+
+.btn {
+    background: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+} 
+
